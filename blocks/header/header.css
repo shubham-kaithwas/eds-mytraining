@@ -394,3 +394,35 @@ body.header-scrolled header nav .nav-brand .default-content-wrapper p:nth-child(
 body.header-scrolled header nav .nav-brand .default-content-wrapper p:nth-child(2) {
     display: block !important;
 }
+
+@media (width <= 991px) {
+    .nav-topbar {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-topbar-left,
+    .nav-topbar-right {
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 0;
+    }
+
+    header nav .nav-cta a, header nav .nav-tools img {
+        display: none;
+    }
+
+    header nav {
+        grid-template:
+            'brand tools hamburger' var(--nav-height)
+            'sections sections sections' 1fr / 1fr auto auto;
+    }
+
+    header nav[aria-expanded='true'] {
+        grid-template:
+        'brand hamburger' var(--nav-height)
+        'sections sections' 1fr
+        'tools tools' var(--nav-height) / 1fr auto;
+    }
+}
