@@ -76,3 +76,48 @@
     background-color: #15263B;
     border-color: #15263B;
 }
+
+.hero.banner {
+    min-height: auto;
+    background: #0a57d5;
+    overflow: hidden;
+}
+
+.hero.banner > div {
+    overflow: hidden;
+}
+
+.hero.banner .hero-section {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 5rem;
+    margin: 0;
+    width: max-content;
+    animation: 50s linear 0s infinite normal none running marleft;
+}
+
+.hero.banner .hero-section:hover {
+    animation-play-state: paused;
+}
+
+.hero.banner .hero-section p {
+    flex: 0 0 auto;
+    margin: 0;
+    width: auto;
+    font-size: clamp(3rem, 6vw, 6rem);
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+@keyframes marleft {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
