@@ -541,6 +541,14 @@ function buildField(field) {
   } = field;
   const controlled = conditional || null;
 
+  // Create title for the form
+  if (type === 'title') {
+    const title = document.createElement('h2');
+    title.className = 'form-title';
+    title.textContent = label;
+    return title;
+  }
+
   // submit/reset buttons stand alone
   if (type === 'submit' || type === 'reset') {
     return buildButton(field);
