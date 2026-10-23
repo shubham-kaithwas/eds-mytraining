@@ -1,0 +1,63 @@
+.support-team {
+    padding: 80px 0;
+}
+
+.support-team-wrapper {
+    display: flex;
+    gap: 28px;
+}
+
+.support-team-card {
+    padding: 30px 15px 30px;
+    background: #fff;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.support-team-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.support-team-image img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.support-team-info h3 {
+    margin: 0 0 5px;
+    font-size: 28px;
+    line-height: 1;
+}
+
+.support-team-info span {
+    font-size: 20px;
+    color: #333;
+}
+
+.support-team-rating {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 18px;
+}
+
+.support-team-rating .stars {
+    color: #0659d4;
+}
+
+.support-team-rating .rating-text {
+    color: #0659d4;
+}
+
+.support-team-description {
+    margin: 0;
+}
+
+@media (width <= 767px) {
+    .support-team-wrapper {
+        flex-direction: column;
+    }
+}
