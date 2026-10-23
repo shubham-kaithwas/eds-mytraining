@@ -34,11 +34,9 @@ export default function decorate(block) {
     info.className = 'support-team-info';
 
     const nameElement = document.createElement('h3');
-    //nameElement.className = 'support-team-name';
     nameElement.textContent = name;
 
     const roleElement = document.createElement('span');
-    //roleElement.className = 'support-team-role';
     roleElement.textContent = role;
 
     info.append(nameElement, roleElement);
