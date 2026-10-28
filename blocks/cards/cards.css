@@ -99,3 +99,86 @@
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
+/* ==========================
+   Profile Cards Variation
+   ========================== */
+.cards.profile-cards > ul {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.cards.profile-cards > ul > li {
+    border: none;
+    box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.09);
+    overflow: hidden;
+}
+
+.cards.profile-cards .cards-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: unset;
+}
+
+.cards.profile-cards .cards-card-body {
+    text-align: center;
+}
+
+.cards.profile-cards .cards-card-body h2 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.1;
+}
+
+.cards.profile-cards .cards-card-body p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.cards.profile-cards .cards-card-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.cards.profile-cards .social-icon {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #ababab;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ababab;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.cards.profile-cards .social-icon:hover {
+    background: #0659d4;
+    border-color: #0659d4;
+    color: #fff;
+}
+
+.cards.profile-cards .social-icon i {
+    font-size: 16px;
+}
+
+/* Tablet */
+@media (width <= 1024px) {
+    .cards.profile-cards > ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (width <= 767px) {
+    .cards.profile-cards > ul {
+        grid-template-columns: 1fr;
+    }
+}
