@@ -14,4 +14,22 @@ export default function decorate(block) {
   });
   ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
   block.replaceChildren(ul);
+
+  // Replace social media text with icons
+  const socialIcons = {
+    facebook: 'fab fa-facebook-f',
+    twitter: 'fab fa-x-twitter',
+    instagram: 'fab fa-instagram',
+    vmat: 'fab fa-vimeo-v'
+  };
+
+  block.querySelectorAll('.cards-card-body ul a').forEach((link) => {
+    const text = link.textContent.trim().toLowerCase();
+
+    if (socialIcons[text]) {
+      link.innerHTML = `<i class="${socialIcons[text]}" aria-hidden="true"></i>`;
+      link.setAttribute('aria-label', text);
+      link.classList.add('social-icon');
+    }
+  });
 }
